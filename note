@@ -1,0 +1,42 @@
+Concept of destructuring
+        without using props continuosly
+
+2.setup of routing
+    2.1 dynamic changes of contents in route is called params.
+        for routing external library used - react-router-dom
+                                install- npm i react-router-dom
+
+        >>Router -> Routes -> Route {path = '' ,element}
+                    dynamicaly changed contents represents as : in path
+a tag in html link tag used in react for linking
+
+3. useParams - used to extract dynamically changing content called params functionality from rect dom
+
+4. Life cycle methods of a component
+        4.1 Mounting - Rendering UI or component - componentDidmount()
+        4.2 Updating - Rerendering of UI whenever the change of state - componentDidupdate()
+        4.3.Unmounting - Rendered DOM such as event listeners access a memmory space during there execution, It released the memmory after execution - componentWillunmount()
+
+5. REDUX
+        * State management tool
+        -- props drilling- A parent component pass the data to a destinated child component through multiple components
+                            A -> B -> C-> D -   A - parent, D - Designated child , B,C - passed component
+                    disadvantage - highly coupled
+        * Redux is used to avoid props drilling
+        * Central store system -  States are stored in a store and any component can access the store.
+        Accessing store by components (working of redux)
+        ----------------------------------------------
+        1. Basic pillers -  1.1 Reducers - Function that accepts an empty state and an action and it return a new state
+                            1.2 Store - Central store to store states
+                            1.3 Action  - functions wrote inside the component
+                            1.4 Component - user created component
+        ->to push data to store by component    ** Component function executes by action, Output of action is the                'payload'whichis an input to Reducers .
+                Reducers accept output of action.
+                Reducers produces a new state output according to the action and this 'updated state' is sored in 'Store'.
+                The new state in the store is accessed by the component..
+        2. Implementation - install redux libraries
+                            npm install redux react-redux redux-thunk - 3 libraries
+                {An async await function returns a promises of the request such as fail or success of the request in terms of javascript..3 stages - fullfilled, regect, pending}            
+
+                * thunk middleware provides an environment for execution of asynchronous function
+
